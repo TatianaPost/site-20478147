@@ -1,0 +1,29 @@
+.rtl{
+  .media-left, .media > .pull-left {
+    padding-left:10px;
+  }
+  #na-menu-primary ul > li > ul > li{
+    float: none;
+  }
+  #na-menu-primary ul > li > ul li[class*="-has-children"]::after{
+    content:"\f104";
+  }
+  .cat_readmore{
+    &:after{
+      content:'\f055' ;
+    }
+  }
+}
+
+@media (max-width:$screen-md) {
+  .rtl {
+    .main-content.sidebar-right{
+      padding-right:15px;
+      padding-left:15px;
+    }
+    .main-content.sidebar-left{
+      padding-right:15px;
+      padding-left:15px;
+    }
+  }
+}

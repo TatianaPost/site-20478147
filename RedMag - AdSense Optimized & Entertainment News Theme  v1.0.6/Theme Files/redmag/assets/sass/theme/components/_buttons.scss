@@ -1,0 +1,76 @@
+//button-variables-outline($color, $background, $border, $colorhover, $bghover, $borderhover )
+
+.btn-outline{
+  @include button-variables-outline($theme-color, transparent, $theme-color, $theme-color, transparent, $theme-color);
+}
+
+.btn-inverse{
+    @include button-variables-outline($white, $theme-color , $theme-color ,$white, $theme-color ,  $theme-color);
+}
+
+.btn-variant{
+    @include button-variables-outline($white, $theme-color , $theme-color ,$white,darken($theme-color, 10%),  darken($theme-color, 10%));
+    padding: 10px 30px;
+}
+
+.button{
+    @include button-variables-outline(#302f34, #ECEDE7 , #282828 , $theme-color, #ECEDE7 ,  $theme-color);
+    border-width:0;
+}
+
+//Loading
+.load-pagination{
+    display: block;
+    text-align: center;
+    #loadMore,#loadMoreCat{
+        margin: 30px;
+    }
+}
+.button.loading {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border-left: 4px solid $theme-color;
+    border-radius: 100%;
+    display: block;
+    height: 100px;
+    margin: auto auto 30px;
+    position: relative;
+    width: 100px;
+    font-size: 0;
+}
+.wrapper-posts {
+    #loadMore,#loadMoreCat{
+        display: block;
+        text-align: center;
+        box-shadow: none;
+        position: relative;
+        padding: 10px 30px;
+    }
+}
+.btn-readMore{
+    display: block;
+}
+.btn-read{
+    background:transparent;
+    border: 1px solid #eaeaf1;
+    display: inline-block;
+    @include rtl-right(20px);
+    padding: 10px 20px 9px;
+    margin-top: 20px;
+    margin-bottom:10px;
+    font-size: 12px;
+    color: $color-title;
+    text-transform: uppercase;
+    &:hover{
+        background: $theme-color;
+        color: $white;
+        border: 1px solid $theme-color;
+    }
+}
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+    @include button-variables-outline(white, $theme-color , $theme-color ,white,darken($theme-color, 5%),  darken($theme-color, 5%));
+}
+input, button, select, textarea {
+    background: white none repeat scroll 0 0;
+    border: 1px solid #ebebeb;
+    padding: 7px 10px;
+}

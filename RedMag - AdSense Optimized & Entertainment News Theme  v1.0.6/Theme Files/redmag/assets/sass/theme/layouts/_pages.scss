@@ -1,0 +1,71 @@
+
+// Element in the page =================================================================================================
+.page-header{
+    margin: 0 0 10px;
+    padding-bottom: 10px;
+    border-bottom: none;
+}
+.page-title{
+    margin-top: 0px;
+    font-size: 30px;
+    margin-bottom: 20px;
+    > h1{
+        margin-top: 0;
+        font-size: 30px;
+    }
+}
+
+.page-content{
+    //padding-bottom: 60px;
+}
+.description-page{
+    padding-top: 20px;
+}
+
+// Contact =============================================================================================================
+.contact{
+    .fa{
+        color: $theme-color;
+        font-size: 18px;
+        width: 30px;
+    }
+    .fa-map-marker,.fa-phone,.fa-envelope-o{
+        @include rtl-margin-right(10px);
+        color: #000;
+    }
+
+}
+
+// Error 404 ===========================================================================================================
+.error-404,.no-results {
+    text-align: left;
+    .page-title {
+       margin-bottom: 0px;
+    }
+    .page-content{
+        padding-top: 50px;
+        padding-bottom: 250px;
+    }
+    .searchform{
+        display:block;
+        max-width: 800px;
+        .input-group{
+            padding-right: 30px;
+        }
+        .form-control{
+            background: #fff;
+            width: 100%;
+            height: 50px;
+            min-width: 400px;
+        }
+        button{
+            height: 50px;
+            background: $theme-color;;
+            color: #fff;
+            border: none;
+            border-radius: 0;
+            font-size: 16px;
+            padding: 12px 30px 10px;
+        }
+    }
+}

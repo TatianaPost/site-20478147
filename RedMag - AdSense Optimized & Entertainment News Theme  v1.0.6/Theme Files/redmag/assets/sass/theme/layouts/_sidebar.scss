@@ -1,0 +1,157 @@
+//Style
+
+.main-content{
+    &.sidebar-right{
+        @include rtl-padding-right(35px);
+    }
+    &.sidebar-left{
+        @include rtl-padding-left(35px);
+    }
+}
+
+.sidebar{
+    color: #555555;
+    font-size: 14px;
+    .content-inner{
+        padding-bottom: 15px;
+        background: none;
+        box-shadow: none;
+    }
+    .widget{
+        margin-bottom: 60px;
+        .widgettitle +*{
+            padding: 20px 0 0;
+            border-top: 0;
+        }
+        &:last-child{
+            margin-bottom:0px;
+        }
+    }
+    //tag html =========================================================================================================
+    a{
+        color: #818181;
+        &:hover{
+            color: #131313;
+        }
+    }
+    ul{
+        list-style: none;
+        padding: 0;
+        li{
+            border-bottom: 1px dashed #DADADA;
+            color:#818181;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 24px;
+            padding: 15px 0;
+            &:last-child{
+                padding-bottom: 0;
+                border-bottom:none;
+            }
+            &.current-cat >a{
+                color: #131313;
+            }
+            .children{
+                border-top: 1px solid #ebebeb;
+                margin-top: 10px;
+            }
+            ul li{
+                padding-left: 20px;
+                &:first-child{
+                    padding-top: 15px;
+                }
+            }
+            &:first-child{
+                padding-top: 0;
+            }
+
+        }
+        &.slick-dots{
+            width: auto;
+            bottom: 10px;
+            right:15px;
+            left: auto;
+            li {
+                border:none;
+                padding: 0;
+                &:first-child{
+                    padding: 0;
+                }
+            }
+        }
+    }
+
+    //element ==========================================================================================================
+    .widget{
+        overflow: visible;
+        &:first-child{
+            .widgettitle{
+                border-top:none;
+            }
+        }
+    }
+    .widgettitle{
+        img{
+            width:auto;
+            height: auto;
+        }
+    }
+    .widgettitle + *{
+        margin: 0;
+        padding:0;
+    }
+    select{
+        margin:20px 0;
+        width: calc(100%);
+    }
+    .post-grid{
+        .article-content{
+            border: none;
+            padding: 0;
+        }
+        .entry-content{
+            display: none;
+        }
+    }
+    //
+    .widget.dropdown{
+        .widgetcontent.dropdown-menu{
+            position: relative;
+            float: none;
+            border: none;
+            box-shadow: none;
+        }
+    }
+    //
+    //recentcomments
+    #recentcomments{
+        li > a{
+            color: $theme-color;
+        }
+    }
+
+    //Fixed Widgets ====================================================================================================
+    .recent-post-widgets{
+        p{
+            display: none;
+        }
+        .side-item-text{
+            float: left;
+            width: 65%;
+        }
+        .entry-title{
+            font-size: 16px;
+        }
+        .entry-meta{
+            padding: 5px 0;
+        }
+    }
+    .newsletters #mc4wp {
+        border: 1px solid #ecede7;
+    }
+    .post-tran{
+        .entry-meta{
+            display: none;
+        }
+    }
+}
